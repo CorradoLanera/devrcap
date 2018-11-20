@@ -5,6 +5,8 @@
 
 [![Travis build
 status](https://travis-ci.org/CorradoLanera/devrcap.svg?branch=master)](https://travis-ci.org/CorradoLanera/devrcap)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/CorradoLanera/devrcap?branch=master&svg=true)](https://ci.appveyor.com/project/CorradoLanera/devrcap)
 [![Coverage
 status](https://codecov.io/gh/CorradoLanera/devrcap/branch/master/graph/badge.svg)](https://codecov.io/github/CorradoLanera/devrcap?branch=master)
 [![CRAN

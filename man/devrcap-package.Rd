@@ -6,9 +6,8 @@
 \alias{devrcap-package}
 \title{devrcap: Mastering Software Development in R (Capstone)}
 \description{
-Collect Code and data for the capstone assignments of
-             the Coursera specialization "Mastering Software Development
-             in R."
+Collect Code and data for the capstone assignments
+    of the Coursera specialization "Mastering Software Development in R."
 }
 \seealso{
 Useful links:
