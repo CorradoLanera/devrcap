@@ -20,3 +20,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.0
 Imports: 
     magrittr
+URL: https://github.com/CorradoLanera/devrcap
+BugReports: https://github.com/CorradoLanera/devrcap/issues
