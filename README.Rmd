@@ -1,0 +1,25 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# devrcap
+
+The goal of devrcap is to collect code and data for the capstone assignments of the Coursera specialization "Mastering Software Development in R."
+
+You can install the development version from
+[GitHub](https://github.com/) with the following procedure:
+
+```{r, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("CorradoLanera/devrcap")
+```

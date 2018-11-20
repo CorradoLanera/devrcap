@@ -1,0 +1,22 @@
+Package: devrcap
+Title: Mastering Software Development in R (Capstone)
+Version: 0.0.0.9000
+Authors@R: 
+    person(
+        given  = "Corrado",
+        family = "Lanera",
+        role   = c("aut", "cre"),
+        email  = "corrado.lanera@gmail.com"
+    )
+Description: Collect Code and data for the capstone assignments of
+             the Coursera specialization "Mastering Software Development
+             in R."
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.0
+Imports: 
+    magrittr
