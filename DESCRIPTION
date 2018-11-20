@@ -1,6 +1,6 @@
 Package: devrcap
 Title: Mastering Software Development in R (Capstone)
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: 
     person(given = "Corrado",
            family = "Lanera",
