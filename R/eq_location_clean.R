@@ -1,13 +1,17 @@
 #' Clean NOAA data frame
 #'
-#' @param data A raw data frame of NOAA data
+#' cleans a character vector formatted like the LOCATION_NAME column of
+#' \code{\link{noaa}} by stripping out the country name (including the
+#' colon) and converts names to title case (as opposed to all caps)
 #'
-#' @return a [tibble][tibble::tibble-package]
+#' @param x (chr) a vector of Earthquake location names
+#'
+#' @return (chr) a cleaned version of the names
 #' @export
 #'
 #' @examples
 #' data(noaa)
-#' tidy_noaa <- eq_location_clean(noaa)
-eq_location_clean <- function(data) {
-    data
+#' eq_location_clean(noaa$LOCATION_NAME)
+eq_location_clean <- function(x) {
+    x
 }

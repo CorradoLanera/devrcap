@@ -4,18 +4,20 @@
 \alias{eq_location_clean}
 \title{Clean NOAA data frame}
 \usage{
-eq_location_clean(data)
+eq_location_clean(x)
 }
 \arguments{
-\item{data}{A raw data frame of NOAA data}
+\item{x}{(chr) a vector of Earthquake location names}
 }
 \value{
-a \link[tibble:tibble-package]{tibble}
+(chr) a cleaned version of the names
 }
 \description{
-Clean NOAA data frame
+cleans a character vector formatted like the LOCATION_NAME column of
+\code{\link{noaa}} by stripping out the country name (including the
+colon) and converts names to title case (as opposed to all caps)
 }
 \examples{
 data(noaa)
-tidy_noaa <- eq_location_clean(noaa)
+eq_location_clean(noaa$LOCATION_NAME)
 }
