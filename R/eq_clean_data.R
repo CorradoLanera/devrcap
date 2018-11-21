@@ -27,5 +27,29 @@
 #' data(noaa)
 #' eq_clean_data(noaa)
 eq_clean_data <- function(data) {
-    data
+    names(data) <- tolower(names(data))
+
+    data %>%
+        dplyr::mutate(
+            location_name = eq_location_clean(location_name)
+        ) %>%
+        dplyr::filter(!is.na(year)) %>%
+        dplyr::mutate(year = as.character(year)) %>%
+        dplyr::mutate_at(
+            dplyr::vars(month:second),
+            dplyr::funs(
+                as.character(.) %>%
+                purrr::map_chr(
+                    ~ dplyr::if_else(is.na(.x),
+                        "01",
+                        stringr::str_pad(.x, width = 2, pad = "0")
+                    )
+                )
+            )
+        ) %>%
+        tidyr::unite(col = "date", year, month, day,
+            sep    = "-",
+            remove = FALSE
+        ) %>%
+        dplyr::mutate(date = as.Date(date))
 }
