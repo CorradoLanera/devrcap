@@ -1,3 +1,5 @@
+* raw-data imported from <https://www.ngdc.noaa.gov/nndc/struts/form?t=101650&s=1&d=1> (issue #1)
+
 # devrcap 0.0.1
 
 * Added basic support (Travis CI, AppVeyor CI coverage, git/GitHub,
@@ -5,4 +7,4 @@
 
 # devrcap 0.0.0.9000
 
-* Added `README`
+* Added `README`.
