@@ -14,8 +14,8 @@ a \link[tibble:tibble-package]{tibble} (which is also a
 \link[=data.frame]{data frame}).
 }
 \description{
-Take the noaa data and clean them accordingly to the istructions
-(see details).
+Take the noaa data and clean them accordingly to the instructions
+(see Details).
 }
 \details{
 To asses the request we have to produce a \link[=data.frame]{data frame}

@@ -10,17 +10,17 @@ test_that("multiple locations were cleaned", {
     expect_equal(eq_location_clean(multiple), "Bab-A-Daraa, Al-Karak")
 })
 
-test_that("location with parentesis swere cleaned", {
-    parenteses <- "GREECE:  THERA ISLAND (SANTORINI)"
+test_that("location with parenthesis swere cleaned", {
+    parentheses <- "GREECE:  THERA ISLAND (SANTORINI)"
     expect_equal(
-        eq_location_clean(multiple),
+        eq_location_clean(parentheses),
         "Thera Island (Santorini)"
     )
 })
 
 test_that("location without country name were cleaned", {
     none <- "SYRIAN COASTS"
-    expect_equal(eq_location_clean(multiple), "Syrian Coasts")
+    expect_equal(eq_location_clean(none), "Syrian Coasts")
 })
 
 

@@ -1,5 +1,5 @@
 * Created `eq_clean_data()` function and corresponding tests.
-* Created `eq_location_clean()` function and corresponding tests.
+* `eq_location_clean()` function created and tested.
 * Added support for tibbles.
 * NOAA raw-data imported and documented into the package data like a
   data frame.

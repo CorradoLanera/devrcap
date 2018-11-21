@@ -15,7 +15,8 @@ Depends:
     R (>= 3.1)
 Imports: 
     magrittr (>= 1.5),
-    tibble (>= 1.4.2)
+    tibble (>= 1.4.2),
+    stringr
 Suggests: 
     covr (>= 3.1.0),
     here (>= 0.1),
