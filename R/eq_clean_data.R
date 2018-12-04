@@ -38,8 +38,7 @@ eq_clean_data <- function(data) {
         dplyr::mutate_at(
             dplyr::vars(month:second),
             dplyr::funs(
-                as.character(.) %>%
-                purrr::map_chr(
+                purrr::map_chr(.,
                     ~ dplyr::if_else(is.na(.x),
                         "01",
                         stringr::str_pad(.x, width = 2, pad = "0")
@@ -51,5 +50,7 @@ eq_clean_data <- function(data) {
             sep    = "-",
             remove = FALSE
         ) %>%
-        dplyr::mutate(date = as.Date(date))
+        dplyr::mutate(
+            data = good_date(year, month, day)
+        )
 }

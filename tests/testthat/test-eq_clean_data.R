@@ -18,7 +18,6 @@ test_that("lowercase columns", {
 test_that("correct column date", {
     data_column <- tidy_noaa[['data']]
 
-    expect(!is_null(data_column))
     expect_is(data_column, "Date")
 })
 
