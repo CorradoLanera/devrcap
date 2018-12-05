@@ -1,3 +1,4 @@
+* Removed integration for R 3.1 and 3.2
 * Created `good_date()` to convert date to Date even if negative
 * Created `eq_clean_data()` function and corresponding tests.
 * `eq_location_clean()` function created and tested.
