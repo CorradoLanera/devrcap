@@ -1,5 +1,7 @@
+* Added `geom_timeline_label()` function to output the ggplot layer for
+  the annotation to the earthquakes time line
 * Added `geom_timeline()` function to output the ggplot2 layer for
-  the earthquakes timeline.
+  the earthquakes time line.
 
 # devrcap 0.1.0
 

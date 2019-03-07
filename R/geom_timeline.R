@@ -23,6 +23,9 @@
 #' }
 #'
 #' @inheritParams ggplot2::layer
+#' @param na.rm (lgl, default = FALSE) remove missing data?
+#' @param ... further arguments passed to the geom layer
+#'
 #' @importFrom ggplot2 layer
 #'
 #' @export
@@ -48,14 +51,15 @@
 #'         )) +
 #'         geom_timeline()
 #' }
-geom_timeline <- function(mapping = NULL, data = NULL,
-    stat = "identity", position = "identity",
-    show.legend = NA, inherit.aes = TRUE) {
-
+geom_timeline <- function(
+    mapping = NULL, data = NULL, stat = "identity",
+    position = "identity", show.legend = NA, inherit.aes = TRUE,
+    ..., na.rm = FALSE
+) {
     ggplot2::layer(
-        geom = GeomTimeline, mapping = mapping,
-        data = data, stat = stat, position = position,
-        show.legend = show.legend, inherit.aes = inherit.aes
+        geom = GeomTimeline, mapping = mapping, data = data,
+        stat = stat, position = position, show.legend = show.legend,
+        inherit.aes = inherit.aes, params = list(na.rm = na.rm, ...)
     )
 }
 
@@ -78,7 +82,7 @@ GeomTimeline <- ggplot2::ggproto("GeomTimeline", ggplot2::Geom,
         y        = 0.25,
         colour   = "grey",
         size     = 1,
-        alpha    = 0.5,
+        alpha    = 0.25,
         shape    = 19,
         fill     = "black",
         linesize = 0.5,
@@ -89,18 +93,31 @@ GeomTimeline <- ggplot2::ggproto("GeomTimeline", ggplot2::Geom,
 
     draw_key = ggplot2::draw_key_point,
 
+    setup_data = function(data, params) {
+
+        if ("colour" %in% colnames(data)) {
+            warning(paste(
+                "missing values for colour.",
+                "They were replaced with the minimum value."
+            ))
+            data$colour[is.na(data$colour)] <-
+                min(data$colour, na.rm = TRUE)
+        }
+        data
+    },
+
     draw_panel = function(data, panel_scales, coord) {
         coords <- data %>%
             coord$transform(panel_scales)
 
         if (length(unique(coords$y)) == 1) {
-            coords$y = 0.25
+            coords$y <- 0.25
         }
 
         points <- grid::pointsGrob(
             x    = coords$x,
             y    = coords$y,
-            size = grid::unit(coords$size / 2, "char"),
+            size = grid::unit(coords$size / 5, "char"),
             pch  = coords$shape,
             gp   = grid::gpar(
                 col      = coords$colour %>%
