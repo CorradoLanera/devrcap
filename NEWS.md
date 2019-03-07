@@ -1,3 +1,6 @@
+* Added `geom_timeline()` function to output the ggplot2 layer for
+  the earthquakes timeline.
+
 # devrcap 0.1.0
 
 * Removed integration for R 3.1 and 3.2

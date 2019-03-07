@@ -20,7 +20,10 @@ Imports:
     dplyr (>= 0.7.7),
     purrr (>= 0.2.5),
     tidyr (>= 0.8.1),
-    lubridate
+    lubridate (>= 1.7.4),
+    ggplot2 (>= 3.1.0),
+    grid,
+    scales (>= 1.0.0)
 Suggests: 
     covr (>= 3.1.0),
     here (>= 0.1),
@@ -32,4 +35,4 @@ Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
