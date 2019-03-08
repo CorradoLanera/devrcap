@@ -1,3 +1,5 @@
+# devrcap 0.3.0
+
 * Added `eq_create_label()` to prepare labels toplot in the interactive
   earthquakes map provided by `eq_map()`
 * Added `eq_map()` to draw an intractive labelled map of earthquakes.
