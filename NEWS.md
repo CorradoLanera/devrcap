@@ -1,3 +1,7 @@
+* Added `eq_create_label()` to prepare labels toplot in the interactive
+  earthquakes map provided by `eq_map()`
+* Added `eq_map()` to draw an intractive labelled map of earthquakes.
+
 # devrcap 0.2.0
 
 * Added `geom_timeline_label()` function to output the ggplot layer for

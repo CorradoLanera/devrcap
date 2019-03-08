@@ -34,20 +34,21 @@
 #'     library(dplyr)
 #'     library(lubridate)
 #'     library(ggplot2)
+#'
 #'     library(devrcap)
-#'     data(noaa)
+#'         data(noaa)
 #'
 #'     noaa %>%
 #'         eq_clean_data() %>%
 #'         filter(
 #'             country %in% c("ITALY", "GREECE", "PORTUGAL"),
-#'             year >= 1900
+#'             year(data) >= 1900
 #'         ) %>%
 #'         ggplot(aes(
-#'             x = date,
+#'             x = data,
 #'             y = country,
-#'             size   = intensity,
-#'             colour = log(deaths)
+#'             size   = eq_primary,
+#'             colour = log(total_deaths)
 #'         )) +
 #'         geom_timeline()
 #' }
