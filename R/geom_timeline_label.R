@@ -46,10 +46,10 @@
 #'         eq_clean_data() %>%
 #'         filter(
 #'             country %in% c("ITALY", "GREECE", "PORTUGAL"),
-#'             year(data) >= 1900
+#'             year(date) >= 1900
 #'         ) %>%
 #'         ggplot(aes(
-#'             x = data,
+#'             x = date,
 #'             y = country,
 #'             size   = eq_primary,
 #'             colour = log(total_deaths),

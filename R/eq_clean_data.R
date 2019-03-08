@@ -51,6 +51,6 @@ eq_clean_data <- function(data) {
             remove = FALSE
         ) %>%
         dplyr::mutate(
-            data = good_date(year, month, day)
+            date = good_date(year, month, day)
         )
 }

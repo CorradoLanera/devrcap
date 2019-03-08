@@ -31,14 +31,14 @@ eq_map(.df, annot_col)
         eq_clean_data() \%>\%
         filter(
             country \%in\% c("ITALY", "GREECE", "PORTUGAL"),
-            year(data) >= 1900
+            year(date) >= 1900
         ) \%>\%
         eq_map("location_name")
 
 
     noaa \%>\%
         eq_clean_data \%>\%
-        dplyr::filter(country == "MEXICO", year(data) >= 2000) \%>\%
+        dplyr::filter(country == "MEXICO", year(date) >= 2000) \%>\%
         eq_map("date")
 }
 }
