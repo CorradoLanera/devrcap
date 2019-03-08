@@ -1,3 +1,5 @@
+* removed rdevel from travis
+
 # devrcap 0.4.0
 
 * Added (basic) tests for all the functions
