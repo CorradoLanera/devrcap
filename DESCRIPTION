@@ -35,7 +35,8 @@ Suggests:
     usethis (>= 1.4.0),
     knitr,
     rmarkdown,
-    DT
+    DT,
+    prettydoc
 Encoding: UTF-8
 Language: en-US
 LazyData: true
