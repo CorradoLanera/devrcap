@@ -1,3 +1,5 @@
+* Added (basic) tests for all the functions
+* Updated `README` file.
 * Added `devrcap` vignette.
 
 # devrcap 0.3.0

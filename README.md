@@ -25,6 +25,24 @@ You can install the development version from
 devtools::install_github("CorradoLanera/devrcap")
 ```
 
+## Usage
+
+The package provide the following functions and data:
+
+  - `noaa`: NOAA Significant Earthquake DatabaseD
+  - `geom_timeline()`: a **ggplot2** geom layer representing a time line
+    of earthquakes, i.e. a time line over which there are a point for
+    each earthquake.
+  - `geom_timeline_label()`: a **ggplot2** geom layer representing
+    earthquakes annotations about the earthquakes location, to be added
+    after the applicaiton of `geom_timeline()`.
+  - `eq_map()`: An interactive map of earthquakes.
+  - `eq_create_label()`: creates nice labels for the eqrthquakes map
+    created by `eq_map()`, reporting information (when present) about
+    location, magnitude and total ammount of deaths for the eartquakes.
+
+To see a complete example, please to the vignette.
+
 ## Code of Conduct
 
 Please note that the ‘devrcap’ project is released with a [Contributor
