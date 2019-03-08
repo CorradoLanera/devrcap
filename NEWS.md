@@ -1,3 +1,4 @@
+* Improved `eq_map()`'s tests
 * removed rdevel from travis
 
 # devrcap 0.4.0

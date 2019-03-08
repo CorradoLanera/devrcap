@@ -12,3 +12,8 @@ map_output <- noaa %>%
 test_that("correct class", {
   expect_is(map_output, "leaflet")
 })
+
+
+test_that("error on wrong data", {
+  expect_error(eq_map(mtcars, "foo"), "Please, provide correct data")
+})
